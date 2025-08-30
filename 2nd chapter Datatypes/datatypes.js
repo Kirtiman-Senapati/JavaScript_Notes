@@ -76,7 +76,11 @@ const test =
     age:32,
     section: "B",
     location:"chhatia",
-    lastloggedindays:["Monday", "Tuesday"]
+    lastloggedindays:["Monday", "Tuesday"],
+    "FullName": "kirtiman"
+    //? here after add Full name to Double quotes "" ya all values "FullName": "kirtiman" if write this way then canot call SPECIFIC Property by Dot operator (test.FullName);this method not work only Square Bracket Method work (test["FullName"]);
+
+    
 
 }
 //console.log(test.lovish);
@@ -85,3 +89,4 @@ console.log(test["lovish"]);
 
 //! under object property Automatic Consider String Example Here Roll automaticaly consider "Roll"Like it Automatically Convert Section = "Section"
 // so when access by Dot Opertor (test.lovish) no need to write Lovish into ""double Quoted line but in Square bracket test["lovish"] need lovish into Double Quoted Line 
+
