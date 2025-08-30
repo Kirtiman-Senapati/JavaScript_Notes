@@ -67,6 +67,7 @@ const item =
 //console.log(item);
 
 //*Another Way call spececic property in object
+const my_testsym = Symbol("hello iam Symbol")
 
 const test = 
 {
@@ -77,7 +78,8 @@ const test =
     section: "B",
     location:"chhatia",
     lastloggedindays:["Monday", "Tuesday"],
-    "FullName": "kirtiman"
+    "FullName": "kirtiman",
+    [my_testsym]:Symbol("hello iam Symbol"),
     //? here after add Full name to Double quotes "" ya all values "FullName": "kirtiman" if write this way then canot call SPECIFIC Property by Dot operator (test.FullName);this method not work only Square Bracket Method work (test["FullName"]);
 
     
@@ -85,8 +87,43 @@ const test =
 }
 //console.log(test.lovish);
 //*Right Way call specific property in object in companies
-console.log(test["lovish"]);
+console.log(test[typeof my_testsym]);
 
 //! under object property Automatic Consider String Example Here Roll automaticaly consider "Roll"Like it Automatically Convert Section = "Section"
 // so when access by Dot Opertor (test.lovish) no need to write Lovish into ""double Quoted line but in Square bracket test["lovish"] need lovish into Double Quoted Line 
 
+
+
+//*********************** */ intresting interview Quesion About Objects/*************** */
+
+/* singleton not create in  Object Literals 
+   only constructor singleton created
+   object.create - it is a constructor
+   if it symbol without changing it data type string how it is possible ?
+   ANS : symbol datatypes not directly Used in object like string ,number so if use symbol in object first declare varible then use it by reference below write it but in object if i want to use symbol without changing data types then use this syntax [my_testsym] in object property.
+
+   const my_testsym = Symbol("hello iam Symbol")
+
+   * What is the Temporal Dead Zone?
+The Temporal Dead Zone is a period where a variable exists in memory but cannot be accessed. It starts when the code execution enters the block containing the variable and ends when the variable is initialized with a value. During this "dead zone," any attempt to access the variable throws a ReferenceError.
+
+Why This Happens
+Variables declared with const and let are hoisted (moved to the top of their scope) but are not initialized until their declaration line is reached. Unlike var variables which are initialized with undefined, const and let variables remain uninitialized in the TDZ
+
+The error suggests you're trying to use my_testsym before this line executes. This commonly happens when:
+
+Accessing the variable before declaration
+
+Circular dependencies in modules
+
+Variable redeclaration in the same scope
+
+Using the variable in hoisted function calls
+
+  ?Solutions 
+
+Declare first, then use
+const my_testsym = Symbol("hello iam Symbol");
+console.log(my_testsym); // Works perfectly
+
+*/
