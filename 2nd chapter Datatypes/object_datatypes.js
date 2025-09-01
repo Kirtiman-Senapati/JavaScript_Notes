@@ -15,6 +15,20 @@ const test =
 };
 
 //console.log(test[typeof my_testsym]);
-console.log(test[my_testsym]); // Symbol(hello iam Symbol) ✅
-console.log(typeof my_testsym); // "symbol" ✅ it execute line 1
-console.log(typeof test[my_testsym]); // "symbol" ✅it execute line 5 inside my_testsym
+//console.log(test[my_testsym]); // Symbol(hello iam Symbol) ✅
+//console.log(typeof my_testsym); // "symbol" ✅ it execute line 1
+//console.log(typeof test[my_testsym]); // "symbol" ✅it execute line 5 inside my_testsym
+
+//* here discuss how to chage value in object Through method without manual  
+ test.age = 80
+ test.FullName = "Rohit"
+//console.log(test.FullName);
+
+ /* Here discuss how use Freeze Method in object property No one change object Value   */
+
+ Object.freeze(test)
+ test.Roll = 76
+ console.log(test);
+ 
+
+ 

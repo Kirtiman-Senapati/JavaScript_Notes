@@ -87,7 +87,7 @@ const test =
 }
 //console.log(test.lovish);
 //*Right Way call specific property in object in companies
-console.log(test[typeof my_testsym]);
+console.log( typeof test[my_testsym]);
 
 //! under object property Automatic Consider String Example Here Roll automaticaly consider "Roll"Like it Automatically Convert Section = "Section"
 // so when access by Dot Opertor (test.lovish) no need to write Lovish into ""double Quoted line but in Square bracket test["lovish"] need lovish into Double Quoted Line 
