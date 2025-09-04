@@ -39,3 +39,12 @@ test.greeting = function()
     
 }
 console.log(test.greeting());
+
+// Add new greeting Two Function
+
+test.greetingTwo = function()
+{
+    console.log(`test new greeting Two Function,${this.location}`);
+    
+}
+console.log(test.greetingTwo());
