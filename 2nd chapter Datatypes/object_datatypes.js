@@ -28,7 +28,14 @@ const test =
 
  Object.freeze(test)
  test.Roll = 76
- console.log(test);
+ //console.log(test);
  
 
- 
+//*  here discuss how add function in object */ 
+
+test.greeting = function()
+{
+    console.log("Heello Kirtiman u try Functions");
+    
+}
+console.log(test.greeting);
