@@ -26,7 +26,7 @@ const test =
 
  /* Here discuss how use Freeze Method in object property No one change object Value   */
 
- Object.freeze(test)
+ //Object.freeze(test)
  test.Roll = 76
  //console.log(test);
  
@@ -38,4 +38,4 @@ test.greeting = function()
     console.log("Heello Kirtiman u try Functions");
     
 }
-console.log(test.greeting);
+console.log(test.greeting());
