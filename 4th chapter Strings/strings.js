@@ -175,3 +175,14 @@ console.log(text.split(" ", 2));
 
 
 💡 The 2 means "only give me first 2 parts." */
+
+
+
+
+//*importants methods of string see in MDN before interview
+
+/* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split 
+
+with other method see mdn
+
+*/
