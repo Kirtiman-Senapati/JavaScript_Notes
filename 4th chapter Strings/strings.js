@@ -47,3 +47,52 @@ console.log(hero.indexOf('k')); // Index 3: In JavaScript, string indexes are ze
 console.log(hero.substring(0,6));// it prints only upto parameter not obey negative parameter 
 
 
+//* discuss slice
+
+const newString = (hero.slice(-12,9))
+console.log(newString);
+ 
+//Example 1: Basic Slicing javascript
+const text = "Hello World";
+console.log(text.slice(0, 5)); // "Hello"
+console.log(text.slice(6));    // "World"
+
+//*Explanation:
+
+//slice(0, 5) = Start from position 0, end before position 5
+
+//slice(6) = Start from position 6, go till the end
+
+
+
+const fullname = "Kirtiman";
+//            01234567  (position numbers)
+
+console.log(name.slice(0, 4)); // "Kirt"
+console.log(name.slice(4, 6)); // "im" 
+console.log(name.slice(6));    // "an"
+
+
+
+//* How Negative Indexing Works:
+
+
+
+const text_slice = "test kirtiman";
+//            0123456789...  (forward counting)
+//            ...987654321-  (backward counting)
+console.log(text_slice.slice(3,5));
+/*  Positions:
+
+-1 = last character (n)
+
+-2 = second last character (a)
+
+-3 = third last character (m)
+
+-12 = 12th character from end (e)
+
+const text_with = Javascript
+
+console.log(str.slice(0, -3));  // "JavaScr" (start to 3rd last)
+*/
