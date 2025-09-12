@@ -40,3 +40,13 @@ console.log(hundreds.toLocaleString());// use to comma in number and it used to 
 
 console.log(hundreds.toLocaleString("en-IN"));
 
+
+
+
+
+
+
+
+
+
+
