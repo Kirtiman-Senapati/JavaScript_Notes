@@ -96,3 +96,15 @@ const text_with = Javascript
 
 console.log(str.slice(0, -3));  // "JavaScr" (start to 3rd last)
 */
+
+
+//* Discuss Strim method in JS
+
+const another_String = "    hello Spacing   "
+console.log(another_String);
+
+const AfterTrim = another_String.trim()
+console.log(AfterTrim);
+
+//please Study trim in MDN documentation 
+
