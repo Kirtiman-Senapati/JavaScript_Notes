@@ -116,3 +116,62 @@ console.log(url.replace("35&","210@"));// if anyone using  space in website url 
 
 
 console.log(url.includes("codelove.com",4));
+
+
+
+//* Split method
+
+
+const str = "The quick brown fox jumps over the lazy dog.";
+const words = str.split(" ");   // cut by space
+console.log(words[3]);          // print 4th word (index 3)
+
+const chars = str.split("");
+console.log(chars[8]);
+// Expected output: "k"
+
+
+
+
+const fruits = "apple,banana,orange";
+console.log(fruits.split(","));
+//OUTPUT ["apple", "banana", "orange"]
+
+
+
+const word = "kirtiman";
+console.log(word.split("i"));
+//👉 Output:
+//["k", "rt", "man"]
+//💡 Here, every "i" gets removed, and the string is cut at that point.
+
+
+
+
+
+
+
+//*3. Split into characters
+const Sname = "ABC";
+console.log(Sname.split(""));
+
+
+/*  👉 Output:
+
+["A", "B", "C"]
+*/
+
+
+
+
+//* 4. Limit the number of splits
+const Stext = "one two three four";
+console.log(text.split(" ", 2));
+
+
+/*  👉 Output:
+
+["one", "two"]
+
+
+💡 The 2 means "only give me first 2 parts." */
