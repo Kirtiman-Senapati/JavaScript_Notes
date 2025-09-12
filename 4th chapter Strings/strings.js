@@ -4,29 +4,46 @@
 let str1 ="kirti"
 let str2 ="man"
 let str3 = str1 + str2
-//console.log(str3);
+console.log(str3);
 
 
 //* interview Question
 
-// console.log(typeof "1" + 2);//result 12 //string2
+console.log(typeof "1" + 2);//result 12 //string2
 
-// console.log(typeof 1 + "2");//result 12 //number2
+console.log(typeof 1 + "2");//result 12 //number2
 
-// console.log(typeof "1"+"2");//result 12 // string2
+console.log(typeof "1"+"2");//result 12 // string2
 
-// console.log(typeof "1" + 2 + 2);//result 122 // string22
+console.log(typeof "1" + 2 + 2);//result 122 // string22
 
-// console.log(typeof 1 + 2 + "2");// result 32 // number 22
-console.log(+ true); // value print 1
-console.log(typeof + true); // type number
-console.log(typeof + ""); //value print 0 // type number
+console.log(typeof 1 + 2 + "2");// result 32 // number 22console.log(+ true); // value print 1console.log(typeof + true); // type numberconsole.log(typeof + ""); //value print 0 // type number
 
 //* new testing with String outdated method
 const name = "kirti"
 const Roll = 50
+
 console.log("roll_no"+ " "+ name +" is " + Roll);
 
 //new method/ modern way use bar ticks and doller with brackets
+//console.log(`roll_no ${name} is ${Roll}`);
 
-console.log(`roll_no ${name} is ${Roll}`);
+
+// use objects in String and new way declare string
+
+const hero = new String('test kirtiman')
+console.log(hero[10]); //use String Length
+console.log(hero.__proto__); // use prototype ya object parameter 
+console.log(hero.length);// this way use length for showing value means entire value not shows in arrays
+
+console.log(hero.toUpperCase())
+
+console.log(hero.charAt(5));//This is a method called on the string hero that returns the character at a specific position, or index.
+
+
+console.log(hero.indexOf('k')); // Index 3: In JavaScript, string indexes are zero-based, meaning the first character is at index 0, the second at index 1, and so on. The number 3 specifies the fourth character of the string. 
+
+
+console.log(hero.substring(0,6));// it prints only upto parameter not obey negative parameter 
+
+
