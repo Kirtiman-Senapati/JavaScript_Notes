@@ -113,3 +113,6 @@ console.log(AfterTrim);
 
 const url = "https://kirtiman.35&_codelove.com"
 console.log(url.replace("35&","210@"));// if anyone using  space in website url js not detect Space and write % 35/%20 so using replace methods 
+
+
+console.log(url.includes("codelove.com",4));
