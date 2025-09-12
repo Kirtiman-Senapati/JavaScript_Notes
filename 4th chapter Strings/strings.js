@@ -22,4 +22,11 @@ console.log(+ true); // value print 1
 console.log(typeof + true); // type number
 console.log(typeof + ""); //value print 0 // type number
 
+//* new testing with String outdated method
+const name = "kirti"
+const Roll = 50
+console.log("roll_no"+ " "+ name +" is " + Roll);
 
+//new method/ modern way use bar ticks and doller with brackets
+
+console.log(`roll_no ${name} is ${Roll}`);
