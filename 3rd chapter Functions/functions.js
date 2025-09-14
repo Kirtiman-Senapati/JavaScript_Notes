@@ -82,3 +82,13 @@ console.log (loginUserMessage("kirtiman")); // kirtiman user logged in sucessful
 
 //*username === undefined is equal to ! if i write if(!username) same with username === undefined because ! change the values trues values false false values true
 
+
+
+//if i want user not enter/pass undefined value then use that way  function loginUserMessage(username ="rahul") then if block not worked because value not undefined
+
+
+function loginUserMessage(username ="rahul")
+{
+    return`${username} logged in sucessfully`
+    
+}console.log(loginUserMessage())
