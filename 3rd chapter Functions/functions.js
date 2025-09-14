@@ -19,4 +19,7 @@ function addTwoNumbers(number1, number2)
     
 }
 
-addTwoNumbers(19,20)
+const result = addTwoNumbers(19,20)// not Returned Value So not stored value in result so console .log print output undefined   
+
+
+console.log(`result is ${result}`);
