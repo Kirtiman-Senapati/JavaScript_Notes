@@ -63,7 +63,7 @@ function loginUserMessage(username)
 {
     if(username === undefined)
     {
-console.log("user not declared please entre a user name");
+        console.log("user not declared please entre a user name");
         
     }
     return`${username} logged in sucessfully`
@@ -91,4 +91,43 @@ function loginUserMessage(username ="rahul")
 {
     return`${username} logged in sucessfully`
     
-}console.log(loginUserMessage())
+}
+console.log(loginUserMessage())
+
+
+
+
+//* how to add cart in Project
+
+
+function calculateCartPrice(num1,num2,num3)
+{
+   
+    
+}
+
+ console.log(calculateCartPrice(400,899,779));
+ 
+calculateCartPrice()
+
+
+
+/* i write functions in Different ways
+
+1. function Declaration
+
+2. function expression
+
+3. arrow Functiom
+
+4.  functions executes immediately after creation
+
+
+syntax: function variable name(parameters)
+{
+    body of code
+
+    use return keyword  if you store value in variables
+}
+
+*/
