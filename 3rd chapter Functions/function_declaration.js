@@ -69,3 +69,38 @@ console.log(addTwoNumbers(677,90));
 })();
 
 
+//let third_Number = 67   
+//let fourth_Number = 40 if i not declare variable in funtion parameter means if i write this way subract() it provied error result not work console.log(subract(900,600)) arguments
+
+
+
+
+/* function subract(third_Number,fourth_Number)
+{
+    third_Number - fourth_Number
+}
+console.log(subract(900,600));
+
+it provides output undefined because not store third_Number - fourth_Number this value result so write return third_Number - fourth_Number its correct code
+*/
+
+
+//*Another Method /Way Declaration Funtion
+
+function subract(third_Number,fourth_Number)
+{
+    return third_Number - fourth_Number
+}
+console.log(subract(900,600));
+
+
+
+
+//* javascript funtion andar kudhko call nahi kar sakta 
+/* 
+function subract(fifth_number,sixth_Number)
+{
+    fifth_number - sixth_Number
+    console.log (subract(900,600));
+}
+ */
