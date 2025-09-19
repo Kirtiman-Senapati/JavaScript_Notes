@@ -35,7 +35,8 @@ function addTwoNumbers(number1, number2)
 {
     
     let result = number1 + number2
-    return resultconsole.log("kirtiman");// after return code not work because after return keyword function finish if you want princonsole.log kirtiman then write it before return 
+    return result
+    console.log("kirtiman");// after return code not work because after return keyword function finish if you want princonsole.log kirtiman then write it before return 
     
 }
 
