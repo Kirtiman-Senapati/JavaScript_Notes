@@ -53,16 +53,33 @@ function outer()
     //if you right innerFuntion then you get outerVar
     function inner()
     {
+        let testValue ="age"
         console.log("inner",outerVar);
     }
     inner();
+
+    function innerTwo()
+    {
+        console.log("innerTwo", outerVar);
+        
+    }
+    innerTwo();
+
 }
 outer();
-console.log("TOO OUTER" , outerVar);
+console.log("TOO OUTER" , outerVar);//provide error outerVar not defined
 
 
 
 // here 1st no acess outervar so use inner funtion in outer funtion
 
 
-//Example From Mdn 
+/*   N.B 
+
+point1. Easily two child funtions brings data from parent funtion
+
+2. but child not give data to parent
+
+3. child not share data with other 
+
+*/
