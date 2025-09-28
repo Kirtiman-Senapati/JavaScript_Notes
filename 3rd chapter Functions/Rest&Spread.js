@@ -53,3 +53,16 @@ let students ={
 const {age,...other} = students
 
 console.log(other);
+
+
+
+
+//*Spread in object
+
+let newStudents = {
+    ...students,
+    //override value
+    Age: 60
+}
+
+console.log(newStudents);
