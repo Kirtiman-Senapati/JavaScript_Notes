@@ -28,6 +28,28 @@ getNames(names[0],names[1],names[2])
 
 //Advance way
 
-getNames(...names)
+getNames(...names)//best
 
 getNames(names)
+
+
+//* Rest in object
+
+let students ={
+    name:"Ajay",
+    Age:56,
+    hobies:["playing cricket,Watching Tv"]
+}
+
+
+// u use this way console.log(students.Age);
+
+//ya right const age = students.Age
+//then use console.log(age)
+
+
+//* if i want combine other things then write this way 
+
+const {age,...other} = students
+
+console.log(other);
