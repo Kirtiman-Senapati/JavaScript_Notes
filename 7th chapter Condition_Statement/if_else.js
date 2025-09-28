@@ -21,3 +21,23 @@ else
     
 }    
 
+
+
+//Ternary operator
+
+const age1 = 90;
+
+
+age1>= 18 ? console.log("Yes"):console.log("False");
+
+
+//Another Way
+
+
+const age2 = 90;
+
+
+let result= age1 >= 18 ? "Yes": "No"
+
+
+console.log(result); 
