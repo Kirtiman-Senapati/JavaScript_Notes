@@ -28,35 +28,55 @@
 
 
 
-let correction = Number(prompt("Enter a option no"))
+// let correction = Number(prompt("Enter a option no"))
 
-switch (correction) 
-{
-    case 1:
-    {
-        console.log("Namaste");
-    }
-    break;
+// switch (correction) 
+// {
+//     case 1:
+//     {
+//         console.log("Namaste");
+//     }
+//     break;
     
 
-    case 2:
-    {
-        console.log("Hello");
-    }
-    break;   
+//     case 2:
+//     {
+//         console.log("Hello");
+//     }
+//     break;   
   
 
-    case 3:
-    {
-        console.log("GoodMorning");
+//     case 3:
+//     {
+//         console.log("GoodMorning");
            
-    }
-    break;
+//     }
+//     break;
 
-    default:
-    {
-        console.log("Invalid OPtion");
+//     default:
+//     {
+//         console.log("Invalid OPtion");
     
-    }
+//     }
 
+// }
+
+
+
+
+
+
+//Another Example
+
+let a = 30
+let option = prompt("Enter a Random Option")
+let b = 40;
+
+switch(option)
+{
+    case "+":console.log( a + b);
+    case "-":console.log( a - b);
+    case "*":console.log( a * b);
+    case "/":console.log( a / b);
+    
 }
