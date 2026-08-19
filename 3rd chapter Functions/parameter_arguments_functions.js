@@ -27,6 +27,27 @@ function greetUser(FirstName,lastName, MiddleName)
 
 greetUser()// it shows undefined in result because no arguments used 
 
+//Another Example i Can use default parameters means default value  so yadi arguments bhi nahi hai phir bhi default value lega   koi undefined output nahi aayega 
+
+
+function greetUser2(name = "Kirtiman")
+{
+    console.log(name);//output here kirtiman 
+}
+
+greetUser2();
+
+// common mistake
+
+
+function greetUser3(name = "Kirtiman")
+{
+    console.log(greetUser3)
+}
+
+greetUser3();//output here [Function: greetUser3] ish se function jis variable mein store hai woh print hoga eshe result aayega 
+
+
 
 /*  //* in function no call itself means example
 funtion add(a,b)
