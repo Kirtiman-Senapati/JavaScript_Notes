@@ -101,6 +101,55 @@ console.log(subract(900,600));
 function subract(fifth_number,sixth_Number)
 {
     fifth_number - sixth_Number
-    console.log (subract(900,600));
+    console.log (subract(900,600)); so koi output nahi aata isliye 
 }
  */
+
+
+
+
+/* common mistake  */
+
+function subtractTwonumber(a,b)
+{
+    var a= 10;
+    var b = 5;
+    result = a-b;
+    console.log(result)
+}
+subtractTwonumber(70,30);
+
+//N.B. Ek simple rule yaad rakho: Parameter mein value bheji → function ke andar us parameter ko dobara value doge → purani value replace ho jayegi.so first function call time  a = 70,b=30 hua then phir se values reassign ho gaya function ke andar now a= 10,b= 5
+
+
+
+/* some examples write function another way */
+
+
+function addTwonumber()      // 1st way 
+{
+    let num1 = Number(prompt("enter 1st number"))
+    let num2 = Number (prompt("Enter 2nd number"))
+    return num1 + num2;
+}
+console.log(addTwonumber());
+
+
+
+
+let addTwonumbers = ()=>  // 2nd way in arrow function 
+{
+    let num1 = Number(prompt("enter 1st number"))
+    let num2 = Number (prompt("Enter 2nd number"))
+    return num1 + num2;
+}
+console.log(addTwonumbers());
+
+
+
+console.log((()=> //3rd way console.log ke andar function immediately invoked function Expression rakh diya hai 
+{
+    let num1 = Number(prompt("enter 1st number"))
+    let num2 = Number (prompt("Enter 2nd number"))
+    return num1 + num2;
+})())

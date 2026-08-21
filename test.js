@@ -77,7 +77,10 @@ console.log(result) */
 
 // test(10, 20, 30, 40, 50);
 
-function restParameter(num1, num2, num3, ...rest)
+
+/* using sum in rest  */
+
+/* function restParameter(num1, num2, num3, ...rest)
 {
     let sum = num1 + num2 + num3;
 
@@ -91,4 +94,49 @@ function restParameter(num1, num2, num3, ...rest)
 
 let result = restParameter(20, 30, 50, 40, 70, 60, 10);
 
-console.log(result);
+console.log(result); */
+
+
+
+/* function subtractTwonumber(a,b)
+{
+    var a;
+    var b;
+    result = a-b;
+    console.log(result)
+}
+subtractTwonumber(10,8); */
+
+
+
+/* 
+function addTwonumber()
+{
+    let num1 = Number(prompt("enter 1st number"))
+    let num2 = Number (prompt("Enter 2nd number"))
+    return num1 + num2;
+}
+console.log(addTwonumber()); */
+
+
+
+
+/* let addTwonumbers = ()=>
+{
+    let num1 = Number(prompt("enter 1st number"))
+    let num2 = Number (prompt("Enter 2nd number"))
+    return num1 + num2;
+}
+console.log(addTwonumbers());
+ */
+
+
+
+
+
+console.log((()=>
+{
+    let num1 = Number(prompt("enter 1st number"))
+    let num2 = Number (prompt("Enter 2nd number"))
+    return num1 + num2;
+})())
