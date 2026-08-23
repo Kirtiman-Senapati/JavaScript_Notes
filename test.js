@@ -247,7 +247,7 @@ function printName1(){
 // }
 
 
-
+/* 
 const greet = function(a) {
     a()
     console.log("Hello");
@@ -262,7 +262,7 @@ function power_Call_another_function_as_Arguments()
 }
 
 greet(power_Call_another_function_as_Arguments);
-
+ */
 
 
 //Variable mein store karna function ko as a value
@@ -282,3 +282,18 @@ function power_Call_another_function_as_Arguments()
 
 //power_Call_another_function_as_Arguments(greet())
 greet(power_Call_another_function_as_Arguments()) */
+
+
+
+
+let first_Function = ()=>
+{
+ console.log("hi iam first function ")
+}
+function second_function_CallfirstFunction(a)
+{
+   a()
+   
+}
+
+second_function_CallfirstFunction(first_Function)
