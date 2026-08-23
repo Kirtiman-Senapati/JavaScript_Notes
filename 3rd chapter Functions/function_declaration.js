@@ -41,6 +41,30 @@ let add = function(x,y)
 }
 console.log(add(800,700));
 
+//********************Another example ya named fuction expression */
+
+let b = function greet()
+{
+    
+    console.log("hi iam tessing function expression with funcion name ");
+} 
+b();
+
+//here output hi iam tessing function expression with funcion name easily shows on console because call b () means store function as a variable so if call b it shows output without error
+
+/* but if call greet  in top example means greet()  instead of b() it provides error because greet only acessable inside function expression not accessible outside function   */
+
+let c = function greet()
+{
+    console.log(greet);//output hi iam tessing function expression with funcion name 
+} 
+c();// greet function ke andar ka local function name/variable hai  jo function ke andar hin kam kar sakta hai  lekin console.log(greet); function ke  bahar kam nahi karega 
+
+let d = function greet()
+{
+    console.log("hi iam tessing function expression with funcion name ");
+} 
+greet();// Uncaught ReferenceError: greet is not defined
 
 
 

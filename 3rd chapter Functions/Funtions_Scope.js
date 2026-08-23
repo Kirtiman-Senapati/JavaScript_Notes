@@ -114,7 +114,7 @@ function subtractTwonumber(a, b)
 subtractTwonumber(10, 8);
 ```
 
-Tum keh rahe ho `var` se output `8` aaya aur `let` se:
+Tum keh rahe ho `var` se output `2` aaya aur `let` se:
 
 ```text
 Identifier 'a' has already been declared
@@ -451,3 +451,100 @@ let a;
 
 ❌ duplicate declaration error.
  */
+
+//Another Example 
+function discussScope()
+{
+    let a = 10
+    let b = 20
+    result = a+b;
+    console.log(result) //output 30 here function eassily access let a,b  because a and declare in inside function and it is example of local scope 
+}
+discussScope();
+
+/* Another example of global scope  */
+
+let scope ="kirtiman"
+
+function globalScope()
+{
+    console .log(scope) // output kirtiman easily access variable scope because it is declare before creating function for this reason it is accesseble by function 
+}
+globalScope();
+
+
+
+/* Example 3 create variable outside after creating Function */
+
+function scope()
+{
+    console.log(scopeAftercreatingFunction) // accessible  varriable print output kirtiman Senapati here console.log(scopeAftercreatingFunction) /task inside function but variable declare outside function 
+}
+
+let scopeAftercreatingFunction = "kirtiman Senapati"
+
+scope() 
+
+
+/* Example 4  of function scope  */
+
+function printoutsideSope()
+{
+    let insidescope = "hi iam inside function so You donot accept Outside function"
+}
+console.log(insidescope) //ReferenceError: insidescope is not defined because Variable  inside function so You donot accept Outside function
+printoutsideScope() 
+
+//here console.log(insidescope) /task outside function but variable declare inside function
+
+
+/* example 4 of function scope with function expression  */
+
+let globalName = "hi iam global variable of function expression "
+let expression = function ()
+{
+    console.log(globalName); // output hi iam global variable of function expression easily access by function 
+}
+expression();
+
+
+/* example 5 of function scope with function expression here create variable after creating function   */
+
+let expression2 = function ()
+{
+    console.log(scopeAftercreatingFunctionExpression) //output hi iam created lately outside after function accessible variable 
+}
+let scopeAftercreatingFunctionExpression = "hi iam created lately outside after function "
+
+expression2()
+
+
+
+/* example 6 of function scope with function expression here task outside function but declare varible inside function  */
+
+let taskOutsidefunction = function()
+{
+    let insidescope = "hi iam inside function so You donot accept Outside function"
+}
+console.log(insidescope) //ReferenceError: insidescope is not defined because Variable  inside function so You donot accept Outside function
+
+taskOutsidefunction();
+
+
+/* Difference between Function expression and declaration with scope  */
+
+printName();
+function printName(){
+    let myName = "kirtiman";
+    console.log(myName)
+}
+// easily call before creating function no provide error in function declaration 
+/* but same code provide error in function expression  */
+
+//***********************Example 2 *********************************/
+
+printName2();
+let printName2 =function(){
+    let myName = "kirtiman";
+    console.log(myName)// output Uncaught ReferenceError: Cannot access 'printName2' before initialization
+}

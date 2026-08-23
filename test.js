@@ -131,12 +131,119 @@ console.log(addTwonumbers());
  */
 
 
-
-
-
-console.log((()=>
+/* console.log((()=>
 {
     let num1 = Number(prompt("enter 1st number"))
     let num2 = Number (prompt("Enter 2nd number"))
     return num1 + num2;
-})())
+})()) */
+
+/* 
+let scope ="kirtiman"
+
+function globalScope()
+{
+    console .log(scope)
+}
+
+globalScope() */
+
+/* 
+
+function scope()
+{
+    console.log(scopeAftercreatingFunction)
+}
+
+let scopeAftercreatingFunction = "kirtiman Senapati"
+
+scope()
+ */
+
+
+
+// function printoutsideSope()
+// {
+//     let insidescope = "hi iam inside function so You donot accept Outside function"
+// }
+// console.log(insidescope)
+
+
+
+/* 
+let globalName = "hi iam global variable of function expression "
+let expression = function ()
+{
+    console.log(globalName);
+}
+expression(); */
+
+
+
+
+/* 
+let expression2 = function ()
+{
+    console.log(scopeAftercreatingFunctionExpression)
+}
+let scopeAftercreatingFunctionExpression = "hi iam created lately outside after function "
+
+expression2(); */
+
+
+
+
+/* let taskOutsidefunction = function()
+{
+    let insidescope = "hi iam inside function so You donot accept Outside function"
+}
+console.log(insidescope)
+
+taskOutsidefunction(); */
+
+
+/* let c = function greet()
+{
+    console.log(greet);
+} 
+c()
+ */
+/* 
+let b = function greet()
+{
+    
+    console.log("hi iam tessing function expression with funcion name ");
+} 
+b(); */
+
+
+
+
+/* let d = function greet()
+{
+    console.log("hi iam tessing function expression with funcion name ");
+} 
+greet(); */
+
+
+
+// console.log(myName);
+// function printName(){
+//     let myName = "kirtiman";
+// }
+// printName()
+
+
+printName1();
+function printName1(){
+    let myName = "kirtiman";
+    console.log(myName)
+}
+
+printName2();
+let printName2 =function(){
+    let myName = "kirtiman";
+    console.log(myName)
+}
+
+
