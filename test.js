@@ -286,7 +286,7 @@ greet(power_Call_another_function_as_Arguments()) */
 
 
 
-let first_Function = ()=>
+/* let first_Function = ()=>
 {
  console.log("hi iam first function ")
 }
@@ -296,4 +296,16 @@ function second_function_CallfirstFunction(a)
    
 }
 
-second_function_CallfirstFunction(first_Function)
+second_function_CallfirstFunction(first_Function) */
+
+
+
+
+
+let abcd =(z)=>{
+    z()
+};
+
+abcd(()=>{
+    console.log("here abcd call directly call a function")
+});

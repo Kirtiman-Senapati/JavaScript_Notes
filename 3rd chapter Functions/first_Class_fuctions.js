@@ -83,3 +83,20 @@ function second_function_CallfirstFunction(b)
 second_function_CallfirstFunction(first_Function)
 
 /* here first function khud ko call nahi kar raha ,second function call kar raha hai first ko as a argument  here first_Function argument ho ke gaya second_function ke pass then second function recieve kiya first function ko as a b then b= first function now call b() means indirectly call first function   */
+
+
+/* Another callback  example with anonymous function */
+
+
+
+let abcd =(z)=>{
+    z()
+};
+
+abcd(()=>
+    {
+     console.log("here abcd call directly call a function")
+    }
+);
+
+/*  here when call abcd() then pura arrow as a argument store hua z pe then calling z() means call annonymous arrow function jisme console.log("here abcd call directly call a function") statement tha */
