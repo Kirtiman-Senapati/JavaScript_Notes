@@ -234,16 +234,51 @@ greet(); */
 // printName()
 
 
-printName1();
+/* printName1();
 function printName1(){
     let myName = "kirtiman";
     console.log(myName)
+} */
+
+// printName2();
+// let printName2 =function(){
+//     let myName = "kirtiman";
+//     console.log(myName)
+// }
+
+
+
+const greet = function(a) {
+    a()
+    console.log("Hello");
+};
+
+
+
+function power_Call_another_function_as_Arguments()
+{
+    
+    console.log("hi i call/pass first function greet as a argument in 2nd function")
 }
 
-printName2();
-let printName2 =function(){
-    let myName = "kirtiman";
-    console.log(myName)
+greet(power_Call_another_function_as_Arguments);
+
+
+
+//Variable mein store karna function ko as a value
+/* const greet = function() {
+    
+    console.log("Hello");
+};
+
+
+//Function ko argument banana
+
+function power_Call_another_function_as_Arguments()
+{
+    
+    console.log("hi i call/pass first function greet as a argument in 2nd function")
 }
 
-
+//power_Call_another_function_as_Arguments(greet())
+greet(power_Call_another_function_as_Arguments()) */
