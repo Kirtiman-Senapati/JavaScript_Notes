@@ -574,3 +574,142 @@ console.log(divideSeven) /* accurate outputaccurate output  Kirtiman
 14
 20
 2*/
+
+
+
+/* *******************************exp14***************************/
+let storeseven;
+function multiple(sayName,add,sub)
+{
+    function sayName(){
+        console.log("Kirtiman");
+    }
+    sayName()
+
+    function add(a,b){
+        console.log(a+b)
+    }
+    add(10,5)
+
+    function sub(a,b){
+        storeseven =a-b;
+        return storeseven;
+    }
+    sub(10,8)
+}
+multiple(sayName,add,sub)/* modern function calling mein ek function ke andar bahat sare nested functions nested hoke rehete hain toh again as a argument unhe call karna kuch need nahi hai ish se error aayega  */
+
+console.log(storeseven)
+
+/* *************************exp15************************** */
+
+let storeeight;
+function multiple()
+{
+    function sayName(){
+        console.log("Kirtiman");
+    }
+    sayName()
+
+    function add(a,b){
+        console.log(a+b)
+    }
+    add(10,5)
+
+    function sub(a,b){
+        storeeight =a-b;
+        return storeeight;
+    }
+    sub(10,8)
+}
+multiple()
+
+console.log(storeeight)
+
+
+/* ******************************nested call function*********************** */
+
+/* **********************************exp16************************** */
+
+
+let greet =function(){
+   
+    function hi(){
+        function medium(){
+            function small(){
+         console.log("hi iam arrow function ")
+        }
+        }
+    }
+}
+greet()/*onetime call nothing print means Yahan sirf:
+
+greet();
+
+call hua hai.
+
+Baaki kisi function ko call nahi kiya.*/
+
+
+
+
+
+/* **********************************exp17************************** */
+
+
+let greetone =function(){
+   
+    function hi(){
+        function medium(){
+            function small(){
+         console.log("hi iam arrow function ")
+        }
+        }
+    }
+}
+greetone()()/* Pehla () call greet greet run ho gaya Lekin greet mein return nahi hai: so JavaScript automatically return karta hai:
+
+undefined So:greet()ka result:undefined  Ab second () kya karega?
+
+Tumne likha:
+
+greet()()
+
+JavaScript isko roughly aise dekhta hai:
+
+undefined()
+
+Aur problem ye hai:
+
+undefined koi function nahi hai.
+
+Isliye error:
+
+TypeError: greet(...) is not a function
+
+*/  
+
+/* **********************************exp18************************** */
+
+let greetTwo =function(){
+   
+    function hi()
+    {
+        function medium()
+        {
+            function small()
+            {
+             console.log("hi iam arrow function ")
+            }
+            return small
+        }
+        return medium
+    }
+    return hi
+}
+greetTwo()()()()/* greet()()()();   
+// greet() → hi
+//      () → medium
+//          () → small
+//              () → runs small(), prints the message */
+
