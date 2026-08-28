@@ -2,9 +2,10 @@
 
 /* Traditional method one function call multiple function  */
 
-function multiple(){
+let store,divide;
+function multiple(sayName,add,sub,r){
 
-    sayName(),add(10,4),sub(),r(4,2)
+    sayName(),add(10,4),sub(40,20),r(4,2)
     
 }
 
@@ -18,15 +19,23 @@ function add(a,b){
     console.log(a+b);
 }
 
-function sub (){
-    return (a-b);
+function sub (a,b){
+   store= a-b;
+   return store;
 }
 
 
 
 function r(c,d)//r means function name 
 {
-    let divide = c/d
+    divide = c/d
     return divide
 }
+
+
+
+multiple(sayName,add,sub,r);
+
+console.log(store)
 console.log(divide)
+
