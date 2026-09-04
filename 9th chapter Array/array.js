@@ -44,3 +44,47 @@ const bike = new Array("tvs","hero","suzuki")
 
 console.log(bike)
 
+
+
+/* Array methods  */
+
+// push() // it push elements from ending ya last 
+
+let vegetables =["carrot","onion","potato"]
+
+console.log(vegetables)// output ["carrot","onion","potato"]
+
+vegetables.push("ladiis finger","cucummber","beat")
+
+
+console.log(vegetables)//output ["carrot","onion","potato,ladiis finger","cucummber","beat"]
+
+
+
+
+//pop() it delete from lasting ya ending 
+
+    vegetables.pop()
+    
+
+console.log(vegetables)//[ 'carrot', 'onion', 'potato', 'ladiis finger', 'cucummber' ] only delete beat element 
+
+
+vegetables.pop("ladiis finger")//wrong provide argument 
+
+console.log(vegetables) //[ 'carrot', 'onion', 'potato', 'ladiis finger' ] only delete item from last if give arguments or not 
+
+
+//Shift() method delete from start 
+
+vegetables.shift()
+
+console.log(vegetables)//[ 'onion', 'potato', 'ladiis finger' ] delete carrot from starting
+
+//unshift() method add element from starting
+
+vegetables.unshift("pumpkin")
+
+console.log(vegetables)//[ 'pumpkin','onion', 'potato', 'ladiis finger' ] add pumpkin from starting 
+
+
