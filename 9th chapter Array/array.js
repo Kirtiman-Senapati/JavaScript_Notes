@@ -93,7 +93,7 @@ console.log(vegetables)//[ 'pumpkin','onion', 'potato', 'ladiis finger' ] add pu
 
 /* ******************************************** Splice method ********************************************** */
 
-//eea method delete karta hai specific items ko ya range ko
+//eea method remove,add,replace  karta hai specific items ko ya range ko
 
 let arr =["Ankit","Rohan","Ayush","kirtiman","cheeranjeeb"]
 
@@ -104,6 +104,32 @@ console.log(arr)
 
 let arr2 =["Ankit","Rohan","Ayush","kirtiman","cheeranjeeb"]
 
-arr2.splice(1,3)//here index  1 se elements katna start kiya index 3 tak only 2 elements deleted hamesha last parameter -1 tak elements delete karega 
+arr2.splice(1,3)//index 1 se start karo aur total 3 elements remove karo
 
-console.log(arr2)  //['Ankit,'cheeranjeeb'] because provides parameter 1,3 so only 2 elements index 1 and index 2 ka
+console.log(arr2)  //['Ankit,'cheeranjeeb'] because provides parameter 1,3 so "Rohan","Ayush","kirtiman" deleted ya remove 
+
+
+/* Splice with add  */
+
+let s=[10,79,60,45,55]
+s.splice(2,1,"kirtiman")//here 2 index se 1 element delete karega then same 2 index se last index ke beech "kirtiman"add kar dega 
+console.log(s)//[10,79,"kirtiman",45,55]
+
+let s2=[10,79,60,45,55,88,99,77]
+
+s2.splice(2,4,"Ayush")
+
+console.log(s2)//[10,79,'Ayush',99,77]
+
+
+
+
+/* ******************************************* Slice method ************************************************ */
+
+let arr3 = ["subham","kirtiman", "Ankush","rohit","Rohan","Ansuman"]
+
+newArray = arr3.slice(1,3) //eea starting index 1 se element ko cut kar raha hai index 2 tak hamesha right value ya last value -1 tak elements ko cut karega here starting index 1 and last /end index 3 means 3-1 = 2 index ya 2 elements ko cut karke separate array karega 
+
+console.log(arr3)////this method not store perform operation in same array eea specially values ko cut ya part niklta hai and dusre varriable mein store karta hai isilye updated result ko dekhne ke liye new varriable mein operation store karna padega 
+
+console.log(newArray)//["kirtiman""Ankush"]
