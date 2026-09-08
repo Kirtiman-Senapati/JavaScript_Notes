@@ -1743,3 +1743,315 @@ So if **`map()` = transform**, then **`filter()` = select/keep**.
 
 
 */
+
+
+
+
+
+/* *******************Normal for loop in araay total sum of all element  ************************************ */
+let hero =[8,6,7,2,5,1,3,55,11,44,33]
+let sum =0
+for (let a = 0; a < hero.length; a++){
+    
+    
+
+    sum = sum + hero[a];
+}
+console.log(sum)//175
+
+// same kaam ko reduce kuch steps mein kardega eea array mein loop ke saath acumulator assign karta hai jo updated values ko store karte hain here sum is a accumulator 
+
+/* **********************Reduce***************************/
+let Result = hero.reduce((sum,value)=>{
+ return sum + value  
+},0)
+
+console.log(Result)
+
+
+/* Another way write same code */
+
+let Result2 = hero.reduce((sum,value)=> sum + value,0) //single annonymous arrow function without return and curle braces 
+
+console.log(Result2)
+
+
+/* mistakes in write for loop in array  */
+
+
+for (let a = 0; a < hero.length; a++){
+    
+    let sum =0 //loop
+
+    sum = sum + hero[a];
+    console.log(sum)// this code is wrong gives output 8 6 7 2 5 1 3 55 11 44 33
+} 
+
+
+/* Tumhara code:
+
+```javascript
+let hero = [8,6,7,2,5,1,3,55,11,44,33];
+
+for (let a = 0; a < hero.length; a++){
+    
+    let sum = 0;
+
+    sum = sum + hero[a];
+    console.log(sum);
+}
+```
+
+## Pehle `hero` ka index dekho
+
+```text
+index:    0  1  2  3  4  5  6   7  8   9   10
+          ↓  ↓  ↓  ↓  ↓  ↓  ↓   ↓  ↓   ↓   ↓
+hero:    [8,  6,  7,  2,  5,  1,  3, 55, 11, 44, 33]
+```
+
+## Loop first time
+
+```javascript
+a = 0
+```
+
+Then:
+
+```javascript
+let sum = 0;
+```
+
+So:
+
+```text
+sum = 0
+```
+
+Then:
+
+```javascript
+sum = sum + hero[a];
+```
+
+`hero[0]` = `8`
+
+So:
+
+```text
+sum = 0 + 8
+sum = 8
+```
+
+Then:
+
+```javascript
+console.log(sum)
+```
+
+Output:
+
+```text
+8
+```
+
+---
+
+## Loop second time
+
+Ab `a++` hua:
+
+```text
+a = 1
+```
+
+**Important:** tumhara ye line phir se execute hota hai:
+
+```javascript
+let sum = 0;
+```
+
+So `sum` **phir se 0 ho gaya**.
+
+Then:
+
+```text
+hero[1] = 6
+
+sum = 0 + 6
+sum = 6
+```
+
+Output:
+
+```text
+6
+```
+
+---
+
+## Third time
+
+```text
+a = 2
+```
+
+Phir:
+
+```javascript
+let sum = 0;
+```
+
+Again:
+
+```text
+sum = 0
+```
+
+Then:
+
+```text
+hero[2] = 7
+
+sum = 0 + 7
+sum = 7
+```
+
+Output:
+
+```text
+7
+```
+
+Isi tarah:
+
+```text
+a = 3 → sum = 0 + 2  → 2
+a = 4 → sum = 0 + 5  → 5
+a = 5 → sum = 0 + 1  → 1
+a = 6 → sum = 0 + 3  → 3
+a = 7 → sum = 0 + 55 → 55
+...
+```
+
+Isliye output:
+
+```text
+8
+6
+7
+2
+5
+1
+3
+55
+11
+44
+33
+```
+
+---
+
+# Tum shayad ye output expect kar rahe the
+
+Shayad tum soch rahe the:
+
+```text
+8
+14
+21
+23
+28
+29
+32
+87
+98
+142
+175
+```
+
+Ye **running total / cumulative sum** hai.
+
+Uske liye `sum` ko loop ke **bahar** declare karo:
+
+```javascript
+let hero = [8,6,7,2,5,1,3,55,11,44,33];
+
+let sum = 0;
+
+for (let a = 0; a < hero.length; a++){
+    
+    sum = sum + hero[a];
+    console.log(sum);
+}
+```
+
+Ab flow:
+
+```text
+sum = 0
+
+0 + 8  = 8
+8 + 6  = 14
+14 + 7 = 21
+21 + 2 = 23
+23 + 5 = 28
+28 + 1 = 29
+29 + 3 = 32
+32 + 55 = 87
+87 + 11 = 98
+98 + 44 = 142
+142 + 33 = 175
+```
+
+Output:
+
+```text
+8
+14
+21
+23
+28
+29
+32
+87
+98
+142
+175
+```
+
+## Main difference
+
+### Tumhara current code:
+
+```javascript
+for (...) {
+    let sum = 0;
+}
+```
+
+Har iteration mein:
+
+```text
+sum → 0
+```
+
+se restart ho raha hai.
+
+### Correct cumulative sum:
+
+```javascript
+let sum = 0;
+
+for (...) {
+    sum = sum + hero[a];
+}
+```
+
+Yahan `sum` loop ke bahar bana hai, isliye purani value next iteration mein **bani rehti hai**.
+
+### Ek line mein:
+
+**`sum` ko loop ke andar rakha → har baar reset to `0`.**
+**`sum` ko loop ke bahar rakha → previous sum preserve hota hai.**
+ */
