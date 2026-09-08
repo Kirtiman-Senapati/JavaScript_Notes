@@ -133,3 +133,37 @@ newArray = arr3.slice(1,3) //eea starting index 1 se element ko cut kar raha hai
 console.log(arr3)////this method not store perform operation in same array eea specially values ko cut ya part niklta hai and dusre varriable mein store karta hai isilye updated result ko dekhne ke liye new varriable mein operation store karna padega 
 
 console.log(newArray)//["kirtiman""Ankush"]
+
+
+
+
+/**************************************************************  Sort method ***************************************/
+
+
+let array = ["subham","kirtiman", "Ankush","rohit","Rohan","Ansuman"]
+
+array.sort()
+
+console.log(array)//['Ankush', 'Ansuman', 'Rohan', 'kirtiman', 'rohit', 'subham'] sorting through ascii value 
+
+
+let arraynum =[8,6,7,2,5,1,3]
+
+arraynum.sort()
+
+console.log(arraynum)//[1, 2, 3, 5, 6, 7, 8] working perfectly but issue comes in 2 digit words 
+
+
+
+let  array2 =[8,6,7,2,5,1,3,55,11,44,33]
+
+array2.sort()
+
+console.log(array2)//[1, 11, 2, 3, 33, 44, 5, 55, 6, 7, 8] not sorted properly so use function a-b for providing accurated result 
+
+
+let  array3 =[8,6,7,2,5,1,3,55,11,44,33]
+
+array3.sort((a,b) => a-b)  //convert array value in numbers then store in a and b then check with a - b yadi "a" small then  a mein store smallest value like this check till ending the array length   so now sorting work properly, for desending use b-a instead a-b  
+
+console.log(array3) //[1, 2, 3, 5, 6, 7, 8, 11, 33, 44, 55]  
