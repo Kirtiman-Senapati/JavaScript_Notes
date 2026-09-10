@@ -3087,4 +3087,18 @@ let des = ["kirtiman","Ansuman","Chiranjeeb",4,88,77,22,8,77,52]
 
 let [first, second] = des;
 
-console.log(first, second)
+console.log(first, second)//kirtiman Ansuman
+
+
+let test = ["kirtiman","Ansuman","Chiranjeeb",4,88,77,22,8,77,52]
+
+let [...rest] = test;
+
+console.log(first + "," + second + "," + rest)//kirtiman,Ansuman,Chiranjeeb,4,88,77,22,8,77,52
+
+
+let test1 = ["kirtiman","Ansuman","Chiranjeeb",4,88,77,22,8,77,52]
+
+let [...v] = test1;
+
+console.log(...v)//kirtiman Ansuman Chiranjeeb 4 88 77 22 8 77 52
