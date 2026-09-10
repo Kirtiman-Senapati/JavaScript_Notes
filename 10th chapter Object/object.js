@@ -60,3 +60,42 @@ teacher.teach();
 // Traditional: introduce: function () { ... }
 
 
+
+// Adding, updating, and deleting object properties
+const car = {
+	brand: "Toyota",
+	model: "Corolla",
+	year: 2020
+};
+
+// Add a new property
+car.color = "blue";
+console.log(car.color);
+
+console.log(car)/* 	brand: 'Toyota',
+    model: 'Corolla'
+	year: 2022,
+    color:'black'
+}; */
+
+// Update an existing property
+car.year = 2024;
+console.log(car.year);
+
+// Delete a property
+delete car.model;
+
+console.log(car)/*{
+	brand: 'Toyota',
+	year: 2024,
+    color:black
+};
+*/
+
+console.log(car.model); // undefined
+
+// Future notes:
+// - Add or update a property with object.key = value or object[key] = value.
+// - Delete a property with delete object.key or delete object[key].
+// - Check whether a property exists with "key" in object.
+// - Object.keys(object) returns an array of the object's property names.
