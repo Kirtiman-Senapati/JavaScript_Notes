@@ -99,3 +99,86 @@ console.log(car.model); // undefined
 // - Delete a property with delete object.key or delete object[key].
 // - Check whether a property exists with "key" in object.
 // - Object.keys(object) returns an array of the object's property names.
+
+// Nested objects
+// A nested object is an object stored inside another object. It is useful for
+// grouping related data, such as a student's address.
+const learner = {
+	name: "Maya",
+	address: {
+		city: "London",
+		country: "UK"
+	}
+};
+
+console.log(learner.address.city); // access a nested property output london 
+learner.address.country = "Canada"; // update a nested property here london updated with canada 
+
+console.log(learner.address.country)// output canada 
+
+
+
+// JSON (JavaScript Object Notation)
+// JSON is a text format commonly used to send and store data. It is useful
+// because different programming languages can easily read and exchange it.
+const learnerJson = JSON.stringify(learner); // object -> JSON text
+console.log(learnerJson); //{"name":"Maya","address":{"city":"London","country":"UK"}}
+
+const learnerCopy = JSON.parse(learnerJson); // JSON text -> object
+
+console.log(learnerCopy)/* const learner = {
+	name: "Maya",
+	address: {
+		city: "London",
+		country: "UK"
+	}
+}; */
+
+console.log(learnerCopy.address.city);//London
+
+// JSON uses double-quoted keys and values, and does not support functions.
+
+// Why convert an object to JSON?
+// A JavaScript object exists only inside the running JavaScript program. JSON
+// is plain text, so it can be saved in a file or sent through a network/API.
+// Example: sending learner data to a server.
+const dataToSend = JSON.stringify(learner);
+console.log(dataToSend); // JSON text, not an object {"name":"Maya","address":{"city":"London","country":"UK"}}
+
+// Why convert JSON back to an object?
+// Data received from a file or API usually arrives as text. JSON.parse() turns
+// that text into a JavaScript object so we can use dot or bracket notation.
+const dataReceived = '{"name":"Maya","age":21}';
+const receivedObject = JSON.parse(dataReceived);
+
+console.log(receivedObject)/*{{name: 'Maya', age: 21}
+age
+: 
+21
+name: "Maya 
+[[Prototype]]
+: 
+Object
+}  */
+console.log(receivedObject.name); // Maya
+console.log(receivedObject.age); // 21
+
+// Simple comparison:
+// Object: use it to work with data in JavaScript.
+// JSON text: use it to store or transfer data.
+// Object -> JSON text: JSON.stringify(object)
+// JSON text -> Object: JSON.parse(jsonText)
+
+// JSON.stringify() also creates a separate JSON copy. Changing the parsed
+// object does not change the original object.
+const copyOfLearner = JSON.parse(JSON.stringify(learner));
+copyOfLearner.address.city = "Paris";
+console.log(learner.address.city); // London
+console.log(copyOfLearner.address.city); // Paris
+
+// JSON cannot store functions, undefined, or certain special JavaScript
+// values. Therefore learner.introduce, if it existed, would not be included
+// after conversion to JSON. JSON is best for data, not for methods/behavior.
+
+
+
